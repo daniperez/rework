@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+./bin/scrap | ./bin/json2markdown | ./bin/markdown2humanreadable

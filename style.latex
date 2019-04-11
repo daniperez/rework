@@ -1,0 +1,20 @@
+\usepackage{sectsty}
+\sectionfont{\clearpage}
+\usepackage{enumitem}
+\usepackage{amsfonts}
+
+% level one
+\setlist[itemize,1]{label=$\bullet$}
+% level two
+\setlist[itemize,2]{label=$\circ$}
+% level three
+\setlist[itemize,3]{label=$\star$}
+
+\usepackage{hyperref}
+
+\hypersetup{
+  pdftitle={re:Work},
+  pdfauthor={Content by Google Inc. Google is neither endorsed nor affiliated with daniperez/rework. The converse is also true. See https://rework.withgoogle.com/terms/},
+  pdfsubject={},
+  pdfkeywords={team, productivity, google}
+}

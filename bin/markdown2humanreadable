@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+
+import pypandoc
+import sys
+import io
+import datetime
+
+# This needs Pandoc to be installed in your
+# system. See https://pandoc.org/installing.html
+
+args = [
+    '--verbose',
+    '--toc',
+    '--verbose',
+    '--toc',
+    '--wrap', 'auto',
+    '--extract-media', 'img/'
+    '--self-contained',
+    '-V', 'title: re:Work',
+    '-V', 'author: Google Inc., edited by github.com/daniperez',
+    '-V', 'date: ' + datetime.datetime.now().strftime("%Y-%m-%d"),
+    '-V', 'subtitle: Let’s make work better',
+    '-V', 'rights: Google Inc., edited by github.com/daniperez',
+    '-V', 'language: en-US'
+]
+
+pdf_args = args + [
+    '--include-in-header', 'style.latex',
+    '-V', 'linkcolor:blue',
+    '-V', 'geometry:a4paper',
+    '-V', 'geometry:margin=2cm',
+    '-V', 'fontfamily: libertine',
+    '-V', 'titlepage: true'
+]
+
+sys.stdin = io.TextIOWrapper(sys.stdin.buffer,
+                             encoding='utf-8',
+                             errors="replace")
+
+markdown =
+  sys.stdin.read().replace('\u200b', ' ').replace("\u201D", '"').replace("\u2019", "'")
+
+print("Generating pdf...")
+pypandoc.convert_text(
+    markdown.encode("utf-8", "surrogateescape"),
+    'pdf', format='markdown',
+    outputfile="rework.pdf",
+    extra_args=pdf_args
+)
+
+print("Generating epub...")
+pypandoc.convert_text(
+    markdown.encode("utf-8", "surrogateescape"),
+    'epub', format='markdown',
+    outputfile="rework.epub",
+    extra_args=args
+)

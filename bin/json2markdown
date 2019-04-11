@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+
+import json
+import sys
+import itertools
+import codecs
+import pypandoc
+from w3lib.html import remove_tags
+
+
+def post_process(kind, what):
+
+    if kind == "title":
+        return what.replace("build      Tool", "Build Tool")
+    else:
+        return what
+
+
+def print_utf8(s):
+    stdout = codecs.getwriter('utf-8')(sys.stdout)
+    stdout.buffer.write(("%s\n" % s).encode('utf-8', 'replace'))
+
+obj = json.load(sys.stdin)
+
+obj.sort(key=lambda x: x["category"])
+
+for category, category_member in itertools.groupby(obj,
+                                                   lambda x: x["category"]):
+
+    print_utf8("# %s" % (category))
+
+    for guide in category_member:
+
+        print_utf8("## %s" % (guide["guide"]))
+
+        guide["steps"].sort(key=lambda x: x["order"])
+
+        for idx, step in enumerate(guide["steps"]):
+
+            print_utf8("### %s - %s" % (idx + 1,
+                                        post_process("title", step["title"])))
+
+            print_utf8("")
+
+            content = step["content"]
+
+            markdown_content = remove_tags(pypandoc.convert_text(
+                content,
+                'markdown',
+                format='html'
+            ))
+
+            print_utf8(markdown_content)
+
+            print_utf8("")
