@@ -37,8 +37,7 @@ sys.stdin = io.TextIOWrapper(sys.stdin.buffer,
                              encoding='utf-8',
                              errors="replace")
 
-markdown =
-  sys.stdin.read().replace('\u200b', ' ').replace("\u201D", '"').replace("\u2019", "'")
+markdown = sys.stdin.read().replace('\u200b', ' ').replace("\u201D", '"').replace("\u2019", "'")
 
 print("Generating pdf...")
 pypandoc.convert_text(
