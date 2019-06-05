@@ -2,19 +2,20 @@
 \sectionfont{\clearpage}
 \usepackage{enumitem}
 \usepackage{amsfonts}
-
-% level one
-\setlist[itemize,1]{label=$\bullet$}
-% level two
-\setlist[itemize,2]{label=$\circ$}
-% level three
-\setlist[itemize,3]{label=$\star$}
-
+\usepackage{fancyhdr}                                                          
+\usepackage{graphicx}                                                          
 \usepackage{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
 
 \hypersetup{
-  pdftitle={re:Work},
-  pdfauthor={Content by Google Inc. Google is neither endorsed nor affiliated with daniperez/rework. The converse is also true. See https://rework.withgoogle.com/terms/},
+  pdftitle={re:Work | Let’s make work better},
+  pdfauthor={Content by Google Inc.},
   pdfsubject={},
   pdfkeywords={team, productivity, google}
 }
+\renewcommand{\footrulewidth}{0.4pt}% default is 0pt
+\pagestyle{fancy}                                                              
+\fancyhead[C]{\thepage}          
+\fancyfoot[C]{\textcolor{gray!80}{\textit{The content of this book is bound to the terms in https://rework.withgoogle.com/terms/. The editor of this book, @daniperez, is not affiliated nor endorsed by Google Inc.}}}
+

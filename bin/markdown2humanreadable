@@ -12,7 +12,6 @@ args = [
     '--verbose',
     '--toc',
     '--verbose',
-    '--toc',
     '--wrap', 'auto',
     '--extract-media', 'img/'
     '--self-contained',
@@ -21,7 +20,9 @@ args = [
     '-V', 'date: ' + datetime.datetime.now().strftime("%Y-%m-%d"),
     '-V', 'subtitle: Let’s make work better',
     '-V', 'rights: Google Inc., edited by github.com/daniperez',
-    '-V', 'language: en-US'
+    '-V', 'language: en-US',
+    '--standalone',
+    '--epub-metadata', 'metadata.xml'
 ]
 
 pdf_args = args + [
@@ -37,7 +38,10 @@ sys.stdin = io.TextIOWrapper(sys.stdin.buffer,
                              encoding='utf-8',
                              errors="replace")
 
-markdown = sys.stdin.read().replace('\u200b', ' ').replace("\u201D", '"').replace("\u2019", "'")
+markdown = (
+  sys.stdin.read()
+  .replace('\u200b', ' ').replace("\u201D", '"').replace("\u2019", "'")
+)
 
 print("Generating pdf...")
 pypandoc.convert_text(
