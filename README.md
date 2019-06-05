@@ -2,6 +2,8 @@
 
 See [LICENSE.md](LICENSE.md).
 
+This work is not affiliated nor endorsed by Google Inc.
+
 # Compile the book by yourself
 
 ## Dependencies
