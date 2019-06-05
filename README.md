@@ -1,5 +1,5 @@
 # Description 
-Tool to create a PDF/EPUB out of the content of [https://rework.withgoogle.com](https://rework.withgoogle.com)
+Creates a PDF/EPUB out of [https://rework.withgoogle.com](https://rework.withgoogle.com)
 
 # Disclaimer
 
@@ -7,7 +7,7 @@ The content processed by this tool belongs to Google Inc. and it is governed by 
 
 I am not affiliated nor endorsed by Google Inc.
 
-See [LICENSE.md](LICENSE.md).
+The tool itself is bound to [these license](LICENSE.md) (MIT).
 
 # Compile the book by yourself
 
