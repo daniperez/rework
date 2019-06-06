@@ -1,9 +1,9 @@
 # Description 
-Creates a PDF/EPUB out of [https://rework.withgoogle.com](https://rework.withgoogle.com)
+Creates a pdf/epub out of [https://rework.withgoogle.com](https://rework.withgoogle.com)
 
 # Releases
 
-You can find the last release [here](https://github.com/daniperez/rework/releases).
+You can find the last release of the pdf/epub [here](https://github.com/daniperez/rework/releases).
 
 # Disclaimer
 
@@ -29,7 +29,7 @@ The compilation of the book has 3 phases:
 
 1. Scrapping [rework.withgoogle.com](rework.withgoogle.com), save as JSON.
 2. Convert JSON to Markdown
-3. Convert Markdown to a human readable format (e.g. PDF, EPUB)
+3. Convert Markdown to a human readable format (e.g. pdf, epub)
 
 In the shell, that translates to:
 
