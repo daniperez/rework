@@ -1,6 +1,10 @@
 # Description 
 Creates a PDF/EPUB out of [https://rework.withgoogle.com](https://rework.withgoogle.com)
 
+# Releases
+
+You can find the last release [here](https://github.com/daniperez/rework/releases).
+
 # Disclaimer
 
 The content processed by this tool belongs to Google Inc. and it is governed by [these terms](https://rework.withgoogle.com/terms/).
