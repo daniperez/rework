@@ -11,7 +11,7 @@ The content processed by this tool belongs to Google Inc. and it is governed by 
 
 I am not affiliated nor endorsed by Google Inc.
 
-The tool itself is bound to [these license](LICENSE.md) (MIT).
+The tool itself is bound to [this license](LICENSE.md) (MIT).
 
 # Compile the book by yourself
 
