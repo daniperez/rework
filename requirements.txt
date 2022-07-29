@@ -1,2 +1,2 @@
-scrapy == 1.6
+scrapy == 2.6.2
 pypandoc == 1.4
