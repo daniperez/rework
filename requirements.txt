@@ -1,2 +1,6 @@
 scrapy == 1.6
 pypandoc == 1.4
+twisted == 21.7.0
+pyopenssl == 22.0.0
+cryptography < 38
+
