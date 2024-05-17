@@ -1,3 +1,5 @@
+> ⚠️ Since (at least) 2023, the site https://rework.withgoogle.com/ shows Japanese-only content and the old content disappeared 😞 
+>  
 # Description 
 Creates a pdf/epub out of [https://rework.withgoogle.com](https://rework.withgoogle.com)
 
