@@ -1,3 +1,5 @@
+> **Update 2024-07-04**: the website seems to be back. The content seems similar, but it has been updated and cleaned up. A new release with that content will follow.
+
 > ⚠️ Since (at least) 2023, the site https://rework.withgoogle.com/ shows Japanese-only content and the old content disappeared 😞 
 >
 > 📰 I wrote about this and related content in my blog: [More Happy And Productive Teams](https://daniperez.github.io/more-happy-and-productive-teams/) _(March 2024)_. 
